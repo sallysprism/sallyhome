@@ -19,7 +19,7 @@ export function Hero() {
     >
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-4">
-          {/* Text Content  */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
