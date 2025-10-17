@@ -1,44 +1,63 @@
 import { motion } from "motion/react";
-import { ExternalLink, Github } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ExternalLink } from "lucide-react";
+import skylifeImg from "../assets/images/project/skylife.png";
+import kolonmallImg from "../assets/images/project/kolonmall.png";
+import milktImg from "../assets/images/project/milkt.png";
+import niceImg from "../assets/images/project/nice.png";
+import hunetImg from "../assets/images/project/hunet.png";
 
 export function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online shopping platform with cart, checkout, and payment integration.",
-      tags: ["React", "Node.js", "Stripe"],
+      title: "Skylife renewal",
+      description:
+        "스카이라이프 고도화 브랜드 샵 통합 개발",
+      tags: ["React", "Node.js", "Tailwindcss", "Next.js", "Figma"],
       gradient: "from-purple-500 to-pink-500",
+      liveLink: "https://www.skylife.co.kr/Main",
+      image: skylifeImg,
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for tracking social media metrics across multiple platforms.",
-      tags: ["Next.js", "TypeScript", "Chart.js"],
+      title: "E-commerce shopingmall renewal",
+      description:
+        "이커머스 쇼핑몰 코오롱몰 리뉴얼",
+      tags: [
+        "React (Ui Library)",
+        "Panda CSS (CSS framework)",
+        "Next.js",
+        "typescript",
+        "Figma",
+      ],
       gradient: "from-blue-500 to-cyan-500",
+      liveLink: "https://www.kolonmall.com/",
+      image: kolonmallImg,
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates and team features.",
-      tags: ["React", "Firebase", "Tailwind"],
+      title: "Milk T web & app SM(유지보수)",
+      description:
+        "- 밀크T유아, 밀크T초등, 밀크T중학, 밀크T고등\n" +
+        "- pc, mobile, tablet 유지보수 및 관리",
+      tags: ["html", "css", "javascript", "jquery", "Photoshop", "Figma"],
       gradient: "from-orange-500 to-red-500",
+      liveLink: "https://www.milkt.co.kr/Main/Main_new",
+      image: milktImg,
     },
     {
-      title: "Portfolio Generator",
-      description: "AI-powered tool to create beautiful portfolio websites in minutes.",
-      tags: ["React", "OpenAI", "Framer Motion"],
+      title: "Nicebizline SI(신규프로젝트)",
+      description:
+        "나이스평가정보의 KISLINE(온라인 종합기업정보 서비스) 리뉴얼 프로젝트",
+      tags: ["Java", "SpringBoot", "Vue", "HTML", "CSS"],
       gradient: "from-green-500 to-emerald-500",
+      liveLink: "https://www.nicebizline.com/",
+      image: niceImg,
     },
     {
-      title: "Weather Application",
-      description: "Real-time weather forecasts with beautiful animations and detailed information.",
-      tags: ["React", "Weather API", "CSS"],
+      title: "In-house program development",
+      description: "내부 교육사이트 web , mobile web 유지 및 보수",
+      tags: ["Javascript", "J-Query", "Kendo Ui"],
       gradient: "from-indigo-500 to-purple-500",
-    },
-    {
-      title: "Fitness Tracker",
-      description: "Track your workouts, nutrition, and progress with detailed analytics.",
-      tags: ["React Native", "MongoDB", "Express"],
-      gradient: "from-pink-500 to-rose-500",
+      liveLink: "https://www.hunet.co.kr/",
+      image: hunetImg,
     },
   ];
 
@@ -71,36 +90,34 @@ export function Projects() {
               whileHover={{ y: -10 }}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
             >
-              {/* Project Image Placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full h-full flex items-center justify-center"
-                >
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity flex gap-4">
-                    <motion.button
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full"
-                    >
-                      <ExternalLink size={20} />
-                    </motion.button>
-                    <motion.button
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full"
-                    >
-                      <Github size={20} />
-                    </motion.button>
-                  </div>
-                </motion.div>
+              {/* Project Image - 16:9 비율 */}
+              <div className="relative w-full aspect-video overflow-hidden bg-gray-100">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                
+                {/* 호버 시 오버레이 */}
+                <div className="absolute top-0 left-0 w-full h-full bg-purple-600/0 group-hover:bg-purple-600/30 transition-all duration-300"></div>
+                
+                {/* 버튼 컨테이너 - 중앙에 고정 */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                  <motion.button
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="p-4 bg-white rounded-full text-purple-600 shadow-xl hover:shadow-2xl transition-all"
+                    onClick={() => window.open(project.liveLink, '_blank')}
+                  >
+                    <ExternalLink size={24} />
+                  </motion.button>
+                </div>
               </div>
 
               {/* Project Info */}
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 mb-4 whitespace-pre-line">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span

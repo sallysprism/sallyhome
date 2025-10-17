@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Github, Vibrate } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
@@ -12,27 +12,24 @@ export function Contact() {
   const socialLinks = [
     {
       icon: Github,
-      href: "#",
+      href: "https://github.com/sallysprism/",
       label: "GitHub",
       color: "hover:text-gray-900",
+      target: "_blank",
     },
     {
-      icon: Linkedin,
-      href: "#",
-      label: "LinkedIn",
+      icon: Vibrate,
+      href: "tel:010-4293-7200",
+      label: "Phone",
       color: "hover:text-blue-600",
-    },
-    {
-      icon: Twitter,
-      href: "#",
-      label: "Twitter",
-      color: "hover:text-blue-400",
+      target: "_blank",
     },
     {
       icon: Mail,
-      href: "#",
+      href: "mailto:sallysprism@gmail.com",
       label: "Email",
       color: "hover:text-red-500",
+      target: "_blank",
     },
   ];
 
@@ -69,68 +66,68 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-1 gap-12">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
-                  required
-                />
-              </div>
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-shadow flex items-center justify-center gap-2"
-              >
-                Send Message
-                <Send size={18} />
-              </motion.button>
-            </form>
-          </motion.div>
+          {/*<motion.div*/}
+          {/*  initial={{ opacity: 0, x: -50 }}*/}
+          {/*  whileInView={{ opacity: 1, x: 0 }}*/}
+          {/*  viewport={{ once: true }}*/}
+          {/*  transition={{ duration: 0.6 }}*/}
+          {/*>*/}
+          {/*  <form onSubmit={handleSubmit} className="space-y-6">*/}
+          {/*    <div>*/}
+          {/*      <label htmlFor="name" className="block mb-2">*/}
+          {/*        Name*/}
+          {/*      </label>*/}
+          {/*      <input*/}
+          {/*        type="text"*/}
+          {/*        id="name"*/}
+          {/*        name="name"*/}
+          {/*        value={formData.name}*/}
+          {/*        onChange={handleChange}*/}
+          {/*        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"*/}
+          {/*        required*/}
+          {/*      />*/}
+          {/*    </div>*/}
+          {/*    <div>*/}
+          {/*      <label htmlFor="email" className="block mb-2">*/}
+          {/*        Email*/}
+          {/*      </label>*/}
+          {/*      <input*/}
+          {/*        type="email"*/}
+          {/*        id="email"*/}
+          {/*        name="email"*/}
+          {/*        value={formData.email}*/}
+          {/*        onChange={handleChange}*/}
+          {/*        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"*/}
+          {/*        required*/}
+          {/*      />*/}
+          {/*    </div>*/}
+          {/*    <div>*/}
+          {/*      <label htmlFor="message" className="block mb-2">*/}
+          {/*        Message*/}
+          {/*      </label>*/}
+          {/*      <textarea*/}
+          {/*        id="message"*/}
+          {/*        name="message"*/}
+          {/*        value={formData.message}*/}
+          {/*        onChange={handleChange}*/}
+          {/*        rows={5}*/}
+          {/*        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"*/}
+          {/*        required*/}
+          {/*      />*/}
+          {/*    </div>*/}
+          {/*    <motion.button*/}
+          {/*      type="submit"*/}
+          {/*      whileHover={{ scale: 1.02 }}*/}
+          {/*      whileTap={{ scale: 0.98 }}*/}
+          {/*      className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-shadow flex items-center justify-center gap-2"*/}
+          {/*    >*/}
+          {/*      Send Message*/}
+          {/*      <Send size={18} />*/}
+          {/*    </motion.button>*/}
+          {/*  </form>*/}
+          {/*</motion.div>*/}
 
           {/* Contact Info */}
           <motion.div

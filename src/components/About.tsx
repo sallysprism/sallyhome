@@ -40,7 +40,7 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">ME</span>
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Me</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             I'm a passionate developer who loves to create amazing digital experiences

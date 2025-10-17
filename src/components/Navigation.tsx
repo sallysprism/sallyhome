@@ -26,7 +26,7 @@ export function Navigation() {
             whileHover={{ scale: 1.05 }}
             className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600"
           >
-            <span className="font-bold text-xl">Portfolio</span>
+            <span className="font-bold text-xl">Sally's Portfolio</span>
           </motion.div>
 
           {/* Desktop Navigation */}

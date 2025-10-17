@@ -8,7 +8,7 @@ export function Hero() {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut",
+      // ease: "easeInOut",
     },
   };
 

@@ -7,28 +7,29 @@ export function Skills() {
       skills: [
         { name: "React", level: 95, color: "from-cyan-500 to-blue-500" },
         { name: "TypeScript", level: 90, color: "from-blue-600 to-blue-700" },
-        { name: "Tailwind CSS", level: 92, color: "from-cyan-400 to-teal-500" },
+        { name: "Tailwind CSS", level: 95, color: "from-cyan-400 to-teal-500" },
         { name: "Next.js", level: 88, color: "from-gray-700 to-gray-900" },
       ],
     },
     {
-      category: "Backend",
-      skills: [
-        { name: "Node.js", level: 85, color: "from-green-600 to-green-700" },
-        { name: "Express", level: 82, color: "from-gray-600 to-gray-700" },
-        { name: "MongoDB", level: 80, color: "from-green-500 to-green-600" },
-        { name: "PostgreSQL", level: 78, color: "from-blue-500 to-indigo-600" },
-      ],
+        category: "Design & Tools",
+        skills: [
+            { name: "Figma", level: 90, color: "from-purple-500 to-pink-500" },
+            { name: "Photoshop", level: 88, color: "from-orange-500 to-red-600" },
+            { name: "Illustrator", level: 75, color: "from-yellow-500 to-orange-500" },
+            // { name: "Docker", level: 72, color: "from-blue-400 to-blue-600" },
+        ],
     },
     {
-      category: "Design & Tools",
+      category: "Others",
       skills: [
-        { name: "Figma", level: 90, color: "from-purple-500 to-pink-500" },
-        { name: "Git", level: 88, color: "from-orange-500 to-red-600" },
-        { name: "AWS", level: 75, color: "from-yellow-500 to-orange-500" },
-        { name: "Docker", level: 72, color: "from-blue-400 to-blue-600" },
+        { name: "Notion", level: 85, color: "from-green-600 to-green-700" },
+        { name: "CapCut", level: 80, color: "from-gray-600 to-gray-700" },
+        { name: "Design & Develop Ai tool", level: 80, color: "from-green-500 to-green-600" },
+        { name: "Chat GTP & Claude", level: 78, color: "from-blue-500 to-indigo-600" },
       ],
     },
+
   ];
 
   return (
@@ -97,7 +98,7 @@ export function Skills() {
           transition={{ duration: 0.8 }}
           className="mt-16 flex flex-wrap justify-center gap-4"
         >
-          {["JavaScript", "CSS3", "HTML5", "REST API", "GraphQL", "Redux", "Webpack", "Jest"].map(
+          {["JavaScript", "CSS3", "HTML5", "Photoshop", "Ai tool", "Figma"].map(
             (tech, index) => (
               <motion.div
                 key={tech}
