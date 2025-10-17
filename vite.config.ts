@@ -5,6 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
+      base: '/sallyhome/', // GitHub 저장소 이름 추가
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -51,7 +52,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+        outDir: 'dist', // build에서 dist로 변경
     },
     server: {
       port: 3000,
